@@ -1,0 +1,45 @@
+# 常见编译输出目录及二进制
+bin/
+dist/
+webget
+
+# go test 生成的临时测试二进制
+*.test
+
+# 代码覆盖率与性能分析 (pprof) 文件
+*.out
+*.prof
+*.pprof
+coverage.html
+
+# tcpdump / Wireshark 抓包数据
+*.pcap
+*.pcapng
+*.cap
+
+# 本地联调测试生成的运行日志
+*.log
+
+# Delve (dlv) 调试时生成的临时二进制
+__debug_bin*
+
+# Linux 段错误核心转储文件
+core
+core.*
+
+# GoLand / IntelliJ
+.idea/
+
+# VS Code (保留 launch/tasks 便于调试，忽略其他个人缓存)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.code-workspace
+
+# Vim / Neovim 交换文件
+*.swp
+*.swo
+*~
+.netrwhist
+
