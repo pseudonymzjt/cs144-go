@@ -1,7 +1,6 @@
 # 常见编译输出目录及二进制
 bin/
 dist/
-webget
 
 # go test 生成的临时测试二进制
 *.test
@@ -16,9 +15,6 @@ coverage.html
 *.pcap
 *.pcapng
 *.cap
-
-# 本地联调测试生成的运行日志
-*.log
 
 # Delve (dlv) 调试时生成的临时二进制
 __debug_bin*

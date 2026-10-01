@@ -1,0 +1,47 @@
+Script started on 2026-10-01 21:21:42+08:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="159" LINES="38"]
+]0;zhoujintian@archlinux:~/cs144-go/pkg/bytestream[?2004h[zhoujintian@archlinux bytestream]$ [7mtelnet cs144.keithw.org http[27mtelnet cs144.keithw.org http
+[?2004lTrying 198.18.0.55...
+Connected to cs144.keithw.org.
+Escape character is '^]'.
+GET /hello HTTP/1.1
+Host: cs144.keithw.org
+HTTP/1.1 408 Request Timeout
+Date: Thu, 01 Oct 2026 13:22:31 GMT
+Server: Apache/2.4.66 (Ubuntu)
+Content-Length: 340
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<title>408 Request Timeout</title>
+</head><body>
+<h1>Request Timeout</h1>
+<p>Server timeout waiting for the HTTP request from the client.</p>
+<hr>
+<address>Apache/2.4.66 (Ubuntu) Server at stagecast.org Port 80</address>
+</body></html>
+Connection closed by foreign host.
+]0;zhoujintian@archlinux:~/cs144-go/pkg/bytestream[?2004h[zhoujintian@archlinux bytestream]$ [7mtelnet cs144.keithw.org http[27mtelnet cs144.keithw.org http
+[?2004lTrying 198.18.0.55...
+Connected to cs144.keithw.org.
+Escape character is '^]'.
+GET /hello HTTP/1.1
+Host: cs144.keithw.org
+Connection: close
+
+HTTP/1.1 200 OK
+Date: Thu, 01 Oct 2026 13:23:47 GMT
+Server: Apache/2.4.66 (Ubuntu)
+Last-Modified: Thu, 13 Dec 2018 15:45:29 GMT
+ETag: "e-57ce9343a1840"
+Accept-Ranges: bytes
+Content-Length: 14
+Connection: close
+Content-Type: text/plain
+
+Hello, CS144!
+Connection closed by foreign host.
+
+
+Script done on 2026-10-01 21:31:52+08:00 [COMMAND_EXIT_CODE="127"]
