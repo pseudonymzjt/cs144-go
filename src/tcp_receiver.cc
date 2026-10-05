@@ -39,7 +39,7 @@ TCPReceiverMessage TCPReceiver::send() const
     if ( writer().is_closed() ) {
       abs_ackno += 1;
     }
-    msg.ackno = Wrap32::wrap( abs_ackno, zero_point_);
+    msg.ackno = Wrap32::wrap( abs_ackno, zero_point_ );
   }
 
   return msg;
