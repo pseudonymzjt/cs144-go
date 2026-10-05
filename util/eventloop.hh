@@ -24,9 +24,7 @@ private:
   using InterestT = std::function<bool( void )>;
 
   struct RuleCategory
-  {
-    std::string name;
-  };
+  { std::string name; };
 
   struct BasicRule
   {
@@ -100,9 +98,7 @@ public:
   // convenience function to add category and rule at the same time
   template<typename... Targs>
   auto add_rule( const std::string& name, Targs&&... Fargs )
-  {
-    return add_rule( add_category( name ), std::forward<Targs>( Fargs )... );
-  }
+  { return add_rule( add_category( name ), std::forward<Targs>( Fargs )... ); }
 };
 
 using Direction = EventLoop::Direction;

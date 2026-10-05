@@ -93,18 +93,13 @@ void throw_timeout( int signal_number )
 
 Timeout::Timeout()
 {
-  struct sigaction action
-  {};
+  struct sigaction action {};
   action.sa_handler = throw_timeout;
   CheckSystemCall( "sigaction", sigaction( SIGPROF, &action, nullptr ) );
 }
 
 Timeout::~Timeout()
-{
-  CheckSystemCall( "sigaction", sigaction( SIGPROF, nullptr, nullptr ) );
-}
+{ CheckSystemCall( "sigaction", sigaction( SIGPROF, nullptr, nullptr ) ); }
 
 Timeout::Timer Timeout::make_timer() // NOLINT(readability-convert-member-functions-to-static)
-{
-  return {};
-}
+{ return {}; }

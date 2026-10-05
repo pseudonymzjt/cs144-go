@@ -7,7 +7,9 @@ class Reassembler
 {
 public:
   // Construct Reassembler to write into given ByteStream.
-  explicit Reassembler( ByteStream&& output ) : output_( std::move( output ) ), eof_index_(0), has_eof_(false), bytes_pending_(0) {}
+  explicit Reassembler( ByteStream&& output )
+    : output_( std::move( output ) ), eof_index_( 0 ), has_eof_( false ), bytes_pending_( 0 )
+  {}
 
   /*
    * Insert a new substring to be reassembled into a ByteStream.
@@ -47,6 +49,6 @@ private:
   std::map<uint64_t, std::string> unassembled_ {};
   uint64_t eof_index_;
   bool has_eof_;
-  void _merge_operation(uint64_t, std::string);
+  void _merge_operation( uint64_t, std::string );
   uint64_t bytes_pending_;
 };

@@ -84,9 +84,7 @@ public:
 };
 
 class TestException : public std::runtime_error
-{
-  using std::runtime_error::runtime_error;
-};
+{ using std::runtime_error::runtime_error; };
 
 inline std::optional<std::string> test_only()
 {
